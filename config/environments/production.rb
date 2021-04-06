@@ -64,10 +64,10 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "sample_app_production"
 
   config.action_mailer.perform_caching = false
-  
+
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
-  host = '<あなたのHerokuサブドメイン名>.herokuapp.com'
+  host = 'https://stark-depths-17572.herokuapp.com'
   config.action_mailer.default_url_options = { host: host }
   ActionMailer::Base.smtp_settings = {
     :port           => ENV['MAILGUN_SMTP_PORT'],
