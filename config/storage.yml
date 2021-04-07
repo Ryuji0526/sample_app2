@@ -12,6 +12,11 @@ amazon:
   secret_access_key: <%= ENV['AWS_SECRET_KEY'] %>
   region:            <%= ENV['AWS_REGION'] %>
   bucket:            <%= ENV['AWS_BUCKET'] %>
+  http_open_timeout: 0
+  http_read_timeout: 0
+  retry_limit: 0
+  upload:
+    server_side_encryption: "aws:kms"
 
 # Use rails credentials:edit to set the AWS secrets (as aws:access_key_id|secret_access_key)
 # amazon:
